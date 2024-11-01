@@ -22,6 +22,7 @@ const Main = () => {
                     <p><span>Hello, I'm Jade-meni!</span></p>
                     <p>How can I help you today?</p>
                 </div>
+                
                 <div className="cards">
                     <div className="card">
                         <p>Suggest beautiful places to see on an upcoming road trip</p>

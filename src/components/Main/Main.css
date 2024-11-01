@@ -181,6 +181,14 @@
 }
 
 @media (max-width: 600px) {
+    .main .greet {
+        margin: 50px 0px;
+        font-size: 38px;
+        color: #c4c7c5;
+        font-weight: 500;
+        padding: 20px;
+    }
+    
     .main-bottom input {
         flex: none;
         width: 150px;
@@ -193,5 +201,8 @@
     }
     .search-box div {
         gap: 5px;
+    }
+    .card {
+        display: none;
     }
 }
