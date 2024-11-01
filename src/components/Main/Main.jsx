@@ -19,13 +19,13 @@ const Main = () => {
             {!showResult
             ?<>
                 <div className="greet">
-                    <p><span>Hello, I'm Jade-meni!</span></p>
+                    <p><span>Hello, <br/>I'm Jade-meni!</span></p>
                     <p>How can I help you today?</p>
                 </div>
 
                 <div className="cards">
                     <div className="card">
-                        <p>Suggest beautiful places to see on an upcoming road trip</p>
+                        <p>Suggest a software project idea focusing on Next.js</p>
                         <img src={assets.compass_icon} alt="" />
                     </div>
                     <div className="card">

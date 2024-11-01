@@ -183,7 +183,7 @@
 @media (max-width: 600px) {
     .main .greet {
         margin: 50px 0px;
-        font-size: 38px;
+        font-size: 50px;
         color: #c4c7c5;
         font-weight: 500;
         padding: 20px;
@@ -209,6 +209,11 @@
         display: none;
     }
     .card:first-child {
-        display: inline-block;
+        /* padding-top: -100px; */
+        display: inline;
+        width: 300px;
+        height: 150px;
+        margin: auto;
+        border-radius: 24px;
     }
 }
