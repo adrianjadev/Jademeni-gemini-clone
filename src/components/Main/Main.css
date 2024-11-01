@@ -193,6 +193,9 @@
         flex: none;
         width: 150px;
     }
+    .main-bottom #prompt-text{
+        font-size: 12px;
+    }
     .main-bottom img {
         width: 20px;
     }
@@ -204,5 +207,8 @@
     }
     .card {
         display: none;
+    }
+    .card:first-child {
+        display: inline-block;
     }
 }
