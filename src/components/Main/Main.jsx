@@ -5,7 +5,7 @@ import { Context } from '../../context/Context'
 
 const Main = () => {
 
-    const { onSent, recentPrompt, showResult, loading, resultData, setInput, input } = useContext(Context);
+    const { onSent, recentPrompt, showResult, loading, resultData, setInput, input, showFooter } = useContext(Context);
     
   return (
     <div className='main'>
@@ -19,21 +19,21 @@ const Main = () => {
             {!showResult
             ?<>
                 <div className="greet">
-                    <p><span>Hello, <br/>I'm Jade-meni!</span></p>
+                    <p><span id="greetings">Hello, I'm Jade-meni!</span></p>
                     <p>How can I help you today?</p>
                 </div>
 
                 <div className="cards">
                     <div className="card">
-                        <p>Suggest a software project idea focusing on Next.js</p>
+                        <p>Suggest a software project idea focusing on React.js</p>
                         <img src={assets.compass_icon} alt="" />
                     </div>
                     <div className="card">
-                        <p>Briefly summarize this concept: urband planning</p>
+                        <p>Create a full stack E-Commerce App using Next.js</p>
                         <img src={assets.bulb_icon} alt="" />
                     </div>
                     <div className="card">
-                        <p>Brainstorm team building activities for our work retreat</p>
+                        <p>Suggest a series of best approach in using TypeScript</p>
                         <img src={assets.message_icon} alt="" />
                     </div>
                     <div className="card">
@@ -67,7 +67,7 @@ const Main = () => {
             {/* main bottom */}
             <div className="main-bottom">
                 <div className="search-box">
-                    <input id="prompt-text" onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='Go! Ask me anything'/>
+                    <input id="prompt-text" onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='Ask Jade-meni!'/>
                     <div className="">
                         <img src={assets.gallery_icon} alt="" />
                         <img src={assets.mic_icon} alt="" />
@@ -78,7 +78,9 @@ const Main = () => {
                     </div>
                 </div>
                 <p className="bottom-info">
-                    Jade-meni may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps
+                    {showFooter
+                    ? "Jade-meni can make mistakes, so double-check it"
+                    :null}
                 </p>
             </div>
         </div>

@@ -12,6 +12,7 @@ const ContextProvider = (props) => {
     const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
     const [resultData, setResultData] = useState("");
+    const [showFooter, setShowFooter] = useState(false);
 
     const delayPara = (index, nextWord) => {
         setTimeout(function () {
@@ -22,14 +23,17 @@ const ContextProvider = (props) => {
     const newChat = () => {
         setLoading(false)
         setShowResult(false)
-
+        setShowFooter(false)
     }
     
+    // Generative method from Gemini API
     const onSent = async (prompt) => {
 
         setResultData("")
         setLoading(true)
         setShowResult(true)
+        setShowFooter(true)
+
         let response;
 
         if (prompt !== undefined) {
@@ -79,6 +83,7 @@ const ContextProvider = (props) => {
         input,
         setInput,
         newChat,
+        showFooter,
     }
 
     return (

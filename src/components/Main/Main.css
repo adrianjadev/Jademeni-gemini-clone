@@ -183,10 +183,15 @@
 @media (max-width: 600px) {
     .main .greet {
         margin: 50px 0px;
-        font-size: 50px;
+        font-size: 48px;
         color: #c4c7c5;
         font-weight: 500;
         padding: 20px;
+        text-align: center;
+    }
+
+    .main #greetings {
+        font-size: 64px;
     }
     
     .main-bottom input {
